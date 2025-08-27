@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+h1, h2 {
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+    color: white;
+}
+.botao {
+    width: 140px;
+    height: auto;
+}
+.navbar-custom {
+    background-color: #1F005C;
+}
+.form-control {
+    border-radius: 18px 0 0 18px;
+}
+.btn-search {
+    background: #4e2c92;
+    color: white;
+    border-radius: 0 18px 18px 0;
+}
+.btn-search:hover {
+    background: rgb(153, 103, 247);
+}
+.interacao {
+    background-color: #1F005C;
+    border-radius: 2rem;
+    width: 50%;
+    margin: 30px auto;
+    padding: 1rem;
+}
+.interacao img {
+    width: 50px;
+}
