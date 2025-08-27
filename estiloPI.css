@@ -1,35 +1,35 @@
 body{
-    color:white;
     background-color: black;
 }
 h1{
     text-align: center;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 40pt;
+    color:white
 }
 h2{
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30pt;
+    color:white
 }
 h3{
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20pt;
-}
-img{
-    padding-left: 370pt;
-    padding-right: 300pt;
+    color:white
 }
 p{
+    
     text-indent: 30pt;
-    padding-left: 300pt;
-    padding-right: 300pt;
     font-size: 15pt;
+    text-align: justify;
+    color:white
 }
-.mencao{
-    text-indent: 3pt;
-    padding-left: 500pt;
-    padding-right: 500pt;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.p-cent{
+    max-width : 1600px;
+    margin : 0 auto;
 }
+.card{
+    background-color: purple;
+}
+img{
+    margin-top: 30pt;
+    margin-bottom: 30pt;
+    align-self: center;
+}
+
