@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar border-bottom border-body" data-bs-theme="dark">
+            <div style="height: 60px;" class="container-fluid justify-content-around">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <img src="img/logo.png" alt="logo" width="60">
+                <a id="marca-nome" class="navbar-brand" href="#">Projeta Neves</a>
+                <form class="d-flex align-items-center me-2" role="search">
+                    <button " class="btn me-2" type="submit"><img width="30" src="img/lupa.png" alt=""></button>
+                    <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                </form>
+                <button class="botaonav" class="btn me-2" type="button">Sobre Nós</button>
+                <button class="botaonav" class="btn me-2" type="button">Mapeamento</button>
+                <button class="botaonav" class="btn me-2" type="button">Projetos</button>
+            </div>
+        </nav>
+
+        <div class="container-fluid text-center">
+            <div id="titulo" class="row d-flex justify-content-center align-items-center min-vh-50">
+                <div class="col col-md-16 text-center">
+                    <h1 id="titulo">Mapa Cultural e Social de Ribeirão das Neves</h1>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div id="categorias" class="col-3">
+                    <div class="row">
+                        <h2>Categorias</h2>
+                    </div>
+                    <div class="row text-start">
+                        <ul>
+                            <li>Teatro</li>
+                            <li>Expressões da cultura popular</li>
+                            <li>Música</li>
+                            <li>Artesanato</li>
+                            <li>Culinária</li>
+                            <li>Patrimônio Cultural</li>
+                            <li>Escolas de Música</li>
+                            <li>Capoeira</li>
+                            <li>Artes</li>
+                            <li>Estúdios</li>
+                            <li>Companhias e Escola de Dança</li>
+                            <li>Ateliê de Pintura</li>
+                            <li>Moda</li>
+                            <li>Design</li>
+                            <li>Outros espaços e atividades artísticos e culturais</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="col-1">
+                    <iframe id="mapa" src="https://www.google.com/maps/d/embed?mid=1qn293um_7jarhwM9AwawwIU--2_RD0o&ehbc=2E312F" width="640" height="480"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

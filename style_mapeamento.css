@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #1f005c;
+}
+
+.botaonav {
+    background-color: #3a1775;
+    border: 0;
+    border-radius: 10px;
+    height: 45px;
+    width: 125px;
+}
+
+.pesquisa{
+    background-color: white;
+    color: black;
+    width: 300px;
+}
+
+#marca-nome {
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#titulo {
+    background-color: #3a1775;
+    color: white;
+    height: 80px;
+    text-align: center;
+    padding: 12;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#categorias {
+    background-color: #2d113f;
+    color: white;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+#mapa {
+    width: 1060px;
+}
+
+body {
+    background-color: black;
+}
