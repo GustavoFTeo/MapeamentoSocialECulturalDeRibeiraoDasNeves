@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    
+}
+h1, h2, h3 {
+    text-align: centers;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+    text-indent: 30pt;
+    font-size: 15pt;
+    text-align: justify;
+    color:white
+}
+.botao {
+    width: 140px;
+    height: auto;
+}
+.card{
+    background-color:#3a1775;
+}
+.card-title{
+    color: aliceblue;
+}
+.navbar-custom {
+    background-color: #1F005C;
+}
+.form-control {
+    border-radius: 18px 0 0 18px;
+}
+.btn-search {
+    background: #4e2c92;
+    color: white;
+    border-radius: 0 18px 18px 0;
+}
+.btn-search:hover {
+    background: rgb(153, 103, 247);
+}
+.interacao {
+    background-color: #1F005C;
+    border-radius: 2rem;
+    width: 50%;
+    margin: 30px auto;
+    padding: 1rem;
+}
+.interacao img {
+    width: 50px;
+}
+
+.navbar {
+    background-color: #1f005c;
+}
+
+.botaonav {
+    background-color: #3a1775;
+    border: 0;
+    border-radius: 10px;
+    height: 45px;
+    width: 125px;
+}
+
+.pesquisa{
+    background-color: white;
+    color: black;
+    width: 300px;
+}
+
+
+#marca-nome {
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#titulo {
+    background-color: #3a1775;
+    color: white;
+    height: 80px;
+    text-align: center;
+    padding: 12;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#categorias {
+    background-color: #2d113f;
+    color: white;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+#mapa {
+    width: 1060px;
+}
+a{
+    text-decoration: none;
+    color:white
+}
