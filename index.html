@@ -6,7 +6,7 @@
     <body>
       <nav class="navbar border-bottom border-body" data-bs-theme="dark">
         <div style="height: 60px;" class="container-fluid justify-content-around">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <img src="navbar/logo.png" alt="logo" width="60">
@@ -20,25 +20,20 @@
               <button class="botaonav btn me-2" type="button"><a href="projetoirmandade.html">Projetos</a></button>
           </div>
       </nav>
-      <div class="collapse navbar-collapse p-5" id="navbarNavAltMarkup" id="menuoculto">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Usúario</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Dados do Usúario</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Curtidas</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Descurtidas</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Salvos</a>
-              </li>
-          </ul>
-      </div>  
+      <div class="offcanvas offcanvas-start menuoculto" tabindex="-1" id="menuLateral">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-center">Usuário </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#">Dados do Usúario</a></li>
+              <li class="list-group-item"><a href="#">Curtidas</a></li>
+              <li class="list-group-item"><a href="#">Descurtidas</a></li>
+              <li class="list-group-item"><a href="#">Salvos</a></li>
+            </ul>
+          </div>
+      </div>
       <div class="container">
         <div class="container text-center my-4">
           <h2>Ribeirão das Neves além do óbvio: conheça o que realmente faz nossa cidade especial!</h2>
@@ -157,6 +152,7 @@
     </body>
 
 </html>
+
 
 
 
