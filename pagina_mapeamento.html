@@ -2,12 +2,11 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="estilizacaoPI2.css">
-        <title>Mapeamento</title>
       </head>
     <body>
       <nav class="navbar border-bottom border-body" data-bs-theme="dark">
         <div style="height: 60px;" class="container-fluid justify-content-around">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <img src="navbar/logo.png" alt="logo" width="60">
@@ -21,26 +20,25 @@
               <button class="botaonav btn me-2" type="button"><a href="projetoirmandade.html">Projetos</a></button>
           </div>
       </nav>
-      <div class="collapse navbar-collapse p-5" id="navbarNavAltMarkup" id="menuoculto">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Usúario</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Dados do Usúario</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Curtidas</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Descurtidas</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Salvos</a>
-              </li>
-          </ul>
-      </div>  
-
+      <div class="offcanvas offcanvas-start menuoculto align-items-center" tabindex="-1" id="menuLateral">
+          <div class="align-items-end">
+            <img src="navbar/logo.png" alt="logo" width="60">
+          </div>
+          <div class="offcanvas-header menuoculto">
+            <img src="icone/usuario.png" alt="usuario" width="200">
+          </div>
+          <div>
+              <h5 class="offcanvas-title text-center menuoculto marca-nome">Usuário </h5>
+          </div>  
+          <div class="offcanvas-body menuoculto w-75">
+            <ul class="list-group menuoculto">
+              <li class="list-group-item menuoculto"><a href="#">Dados do Usúario</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Curtidas</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Descurtidas</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Salvos</a></li>
+            </ul>
+          </div>
+      </div>
   <!-- TÍTULO -->
   <div class="text-center mt-3">
     <h1 style="color: aliceblue;">Mapeamento</h1>
@@ -93,3 +91,4 @@
      
 
       
+
