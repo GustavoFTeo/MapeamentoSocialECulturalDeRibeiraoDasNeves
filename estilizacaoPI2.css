@@ -53,6 +53,10 @@ p {
     margin: 30px auto;
     padding: 1rem;
 }
+.interacao p {
+    text-indent: 0pt;
+}
+
 .interacao img {
     width: 50px;
 }
@@ -110,6 +114,7 @@ a{
     background-color: #3a1775;
     color: white
 }
+
 
 
 
