@@ -114,6 +114,25 @@ a{
     background-color: #3a1775;
     color: white
 }
+footer {
+    background-color: #2b0772;
+}
+
+h4, h5 {
+    text-align: center;
+    font-size: 15pt;
+}
+.p-Foo{
+    text-indent: 10pt;
+    text-align: justify;
+    font-size: 10pt;
+}
+
+.li-Foo{
+    font-size: 11pt;
+    padding-left: 60pt;
+}
+
 
 
 
