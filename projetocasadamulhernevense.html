@@ -6,42 +6,45 @@
     <body>
       <nav class="navbar border-bottom border-body" data-bs-theme="dark">
         <div style="height: 60px;" class="container-fluid justify-content-around">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Início</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Sobre</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Serviços</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Contato</a>
-                      </li>
-                  </ul>
-              </div>
-              <img src="logo.png" alt="logo" width="60">
+              <img src="navbar/logo.png" alt="logo" width="60">
               <a id="marca-nome" class="navbar-brand" href="#">Projeta Neves</a>
               <form class="d-flex align-items-center me-2" role="search">
-                  <button  class="btn me-2" type="submit"><img width="30" src="lupa.png" alt=""></button>
+                  <button  class="btn me-2" type="submit"><img width="30" src="navbar/lupa.png" alt=""></button>
                   <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
               </form>
-              <button class="botaonav" class="btn me-2" type="button"><a href="index.html">Sobre Nós</a></button>
-              <button class="botaonav" class="btn me-2" type="button"><a href="pagina_mapeamento.html">Mapeamento</a></button>
-              <button class="botaonav" class="btn me-2" type="button"><a href="projetosemifusa.html">Projetos</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="index.html">Sobre nós</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="pagina_mapeamento.html">Mapeamento</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="projetoirmandade.html">Projetos</a></button>
           </div>
       </nav>
+      <div class="offcanvas offcanvas-start menuoculto align-items-center" tabindex="-1" id="menuLateral">
+          <div class="align-items-end">
+            <img src="navbar/logo.png" alt="logo" width="60">
+          </div>
+          <div class="offcanvas-header menuoculto">
+            <img src="icone/usuario.png" alt="usuario" width="200">
+          </div>
+          <div>
+              <h5 class="offcanvas-title text-center menuoculto marca-nome">Usuário </h5>
+          </div>  
+          <div class="offcanvas-body menuoculto w-75">
+            <ul class="list-group menuoculto">
+              <li class="list-group-item menuoculto"><a href="#">Dados do Usúario</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Curtidas</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Descurtidas</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Salvos</a></li>
+            </ul>
+          </div>
+      </div>
       <div class="container">
         <div class="container text-center my-4">
             <h1>Casa da Mulher Nevense</h1>
             <div class="d-flex justify-content-center">
                 <div class="card mb-3 w-75">
-                    <img src="imagemcasadamulher2.jpeg" class="card-img-top imgHenfil" alt="...">
+                    <img src="projetos/casadamulher/img/imagemcasadamulher2.jpeg" class="card-img-top imgHenfil" alt="...">
                     <div class="card-body">
                         <h5 class="card-title p-Ref">Três unidade:</h5>
                         <p class="card-text p-Ref">Endereço: Rua Santo Agostinho, 09, Bairro São Januário, Ribeirão das Neves, MG</p>
@@ -65,7 +68,7 @@
             </p>
             <div class="d-flex justify-content-center">
                 <div class="card mb-3 w-75">
-                    <img src="imagemcasadamulher1.jpg" class="card-img-top imgHenfil" alt="...">
+                    <img src="projetos/casadamulher/img/imagemcasadamulher1.jpg" class="card-img-top imgHenfil" alt="...">
                     <div class="card-body">
                         <h5 class="card-title p-Ref">Ações em comemoração ao Junho Lilás</h5>
                         <p class="card-text p-Ref">A tradicional aula de zumba da Casa da Mulher Nevense, unidade 
@@ -86,7 +89,7 @@
             </p>
             <div class="d-flex justify-content-center">
                 <div class="card mb-3 w-75">
-                    <img src="imagemcasadamulher3.jpg" class="card-img-top imgHenfil" alt="...">
+                    <img src="projetos/casadamulher/img/imagemcasadamulher3.jpg" class="card-img-top imgHenfil" alt="...">
                     <div class="card-body">
                         <h5 class="card-title p-Ref">Ações Casa da Mulher Nevense</h5>
                         <p class="card-text p-Ref"><small class="p-Ref2">Retirado de: Prefeitura de Ribeirão das neves. Acesso em: 15 set. 2025.</small></p>
@@ -106,7 +109,7 @@
                 </p>
                 <div class="d-flex justify-content-center">
                     <div class="card mb-3 w-75">
-                    <img src="imagemcasadamulher4.jpg" class="card-img-top imgHenfil" alt="...">
+                    <img src="projetos/casadamulher/img/imagemcasadamulher4.jpg" class="card-img-top imgHenfil" alt="...">
                     <div class="card-body">
                         <h5 class="card-title p-Ref">Roda de Conversa com Raquel Simplício</h5>
                         <p class="card-text p-Ref">
@@ -120,7 +123,7 @@
                 </div>
         </div>
       </div>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
-</html>>
+</html>
+
