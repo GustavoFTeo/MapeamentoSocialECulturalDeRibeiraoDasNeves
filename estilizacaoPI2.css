@@ -50,8 +50,6 @@ p {
     background-color: #1F005C;
     border-radius: 2rem;
     width: 90%;
-    margin: 30px auto;
-    padding: 1rem;
 }
 .interacao img {
     width: 50px;
@@ -110,6 +108,7 @@ a{
     background-color: #3a1775;
     color: white
 }
+
 
 
 
