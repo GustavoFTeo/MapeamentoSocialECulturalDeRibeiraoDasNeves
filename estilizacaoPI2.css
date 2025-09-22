@@ -190,8 +190,9 @@ h4, h5 {
   color: rgb(179, 181, 190)        
 }
 
-
-
+.local_projeto p {
+   text-indent: 0pt !important;
+}
 
 
 
