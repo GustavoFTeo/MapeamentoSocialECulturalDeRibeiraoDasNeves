@@ -33,4 +33,4 @@ Projeta neves é um projeto de mapeamento cultural de Ribeirão das Neves visa v
 
 ## Fluxo de navegação
 
-[Fruxo de Navegacao]([https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/](https://www.canva.com/design/DAGzPiJkTwM/8ftA-JyotdkOGUPCMPh8Pg/edit?utm_content=DAGzPiJkTwM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+[Fruxo de Navegacao](https://www.canva.com/design/DAGzPiJkTwM/8ftA-JyotdkOGUPCMPh8Pg/edit?utm_content=DAGzPiJkTwM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
