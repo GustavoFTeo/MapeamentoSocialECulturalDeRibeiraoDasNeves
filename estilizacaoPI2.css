@@ -132,6 +132,56 @@ h4, h5 {
     font-size: 11pt;
     padding-left: 60pt;
 }
+ 
+.projeto-card {
+    background-color: #4b0082;
+    border: none;
+    color: white;
+}
+
+.projeto-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-card i {
+    font-size: 1.2rem;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.projeto-card i:hover {
+    color: yellow;
+}
+
+.projeto-card {
+    background-color: #4b0082;
+    border: none;
+    color: white;
+}
+
+.projeto-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-card i {
+    font-size: 1.2rem;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.projeto-card i:hover {
+    color: yellow;
+}
+
+.projeto-card > p {
+    text-align: center;
+    margin-top: 10px;
+}
+
 
 
 
