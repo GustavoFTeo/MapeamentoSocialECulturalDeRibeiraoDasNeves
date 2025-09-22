@@ -1,8 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="estilizacaoPI2.css">
+        <title>Projeta Neves</title>
+      </head>
+    <body>
+      <nav class="navbar border-bottom border-body" data-bs-theme="dark">
+        <div style="height: 60px;" class="container-fluid justify-content-around">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <img src="navbar/logo.png" alt="logo" width="60">
+              <a id="marca-nome" class="navbar-brand" href="#">Projeta Neves</a>
+              <form class="d-flex align-items-center me-2" role="search">
+                  <button  class="btn me-2" type="submit"><img width="30" src="navbar/lupa.png" alt=""></button>
+                  <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              </form>
+              <button class="botaonav btn me-2" type="button"><a href="index.html">Sobre nós</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="pagina_mapeamento.html">Mapeamento</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="projetos.html">Projetos</a></button>
+          </div>
+      </nav>
+      <div class="offcanvas offcanvas-start menuoculto align-items-center" tabindex="-1" id="menuLateral">
+          <div class="align-items-end">
+            <img src="navbar/logo.png" alt="logo" width="60">
+          </div>
+          <div class="offcanvas-header menuoculto">
+            <img src="icone/usuario.png" alt="usuario" width="200">
+          </div>
+          <div>
+              <h5 class="offcanvas-title text-center menuoculto marca-nome">Usuário </h5>
+          </div>  
+          <div class="offcanvas-body menuoculto w-75">
+            <ul class="list-group menuoculto">
+              <li class="list-group-item menuoculto"><a href="#">Dados do Usúario</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Curtidas</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Descurtidas</a></li>
+              <li class="list-group-item menuoculto"><a href="#">Salvos</a></li>
+            </ul>
+          </div>
+      </div>
 <div class="container my-5">
   <h1 class="text-center">Projetos</h1>
 
   <h2 class="mt-5">Projetos culturais</h2>
-  <div class="row text-center align-items-center"> 
+  <div class="row text-center align-items-center"> <!-- Alinhando as colunas -->
     <div class="col-md-4 mb-4">
       <div class="card projeto-card">
         <img src="pagina_projetos/imagemprojeto.jpeg" class="card-img-top" alt="Casa Semifusa">
@@ -48,6 +91,7 @@
       </div>
     </div>
 
+
     <div class="col-md-4 mb-4">
       <div class="card projeto-card">
         <img src="pagina_projetos/imagemcdm.jpg" class="card-img-top" alt="Cidade dos Meninos">
@@ -83,3 +127,5 @@
   </div>
 
 </div>
+</body>
+</html>
