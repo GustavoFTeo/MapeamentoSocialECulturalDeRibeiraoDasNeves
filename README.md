@@ -26,11 +26,11 @@ Projeta neves é um projeto de mapeamento cultural de Ribeirão das Neves visa v
 [Gustavo Ferreira Teodoro](https://gustavofteo.github.com).  
 [Phabricio Raphael Pereira da Silva](https://github.com/pharafa).  
 [Sarah Rayane Correia do Nascimento](https://github.com/SarahRayane11).  
-[Laís Cristina](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/).  
+[Laís Cristina da Silva](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/).  
 [Carla Jhenifer Morais Vieira](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/).  
-[Emily](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/).  
-[Lucas](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/).  
+[Emily Vitória Melo Batista de Castro](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/).  
+[Lucas Eduardo Drummond Pereira](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/).  
 
 ## Fluxo de navegação
 
-[Fruxo de Navegacao](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/)
+[Fruxo de Navegacao]([https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/](https://www.canva.com/design/DAGzPiJkTwM/8ftA-JyotdkOGUPCMPh8Pg/edit?utm_content=DAGzPiJkTwM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
