@@ -182,6 +182,13 @@ h4, h5 {
     margin-top: 10px;
 }
 
+.botaonav:hover,
+.botaonav:focus,
+.botaonav:active {
+  background-color: #3a1775; 
+  box-shadow: none;  
+  color: rgb(179, 181, 190)        
+}
 
 
 
