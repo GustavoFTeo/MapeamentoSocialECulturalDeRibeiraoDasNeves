@@ -8,9 +8,9 @@ Projeta neves é um projeto de mapeamento cultural de Ribeirão das Neves visa v
 [Projeta Neves](https://gustavofteo.github.io/MapeamentoSocialECulturalDeRibeiraoDasNeves/)
 
 ## Mídias
-![sobrenos](readme/sobrenos.png)
-![mapeamento](readme/mapeamento.png)
-![projeto](readme/projeto.png)
+![sobrenos](readme/SobreNos.png)
+![mapeamento](readme/Mapeamento.png)
+![projeto](readme/Projetos.png)
 
 ## Funcionalidades 
 * Listar projetos  
