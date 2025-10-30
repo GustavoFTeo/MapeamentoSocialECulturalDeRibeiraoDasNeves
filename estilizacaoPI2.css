@@ -13,6 +13,11 @@ p {
     text-align: justify;
     color:white
 }
+.p-Pro{
+    font-size: 15pt;
+    text-align: center;
+    color:white
+}
 .p-Ref{
     text-indent: 0pt;
     font-size: 12pt;
@@ -193,6 +198,7 @@ h4, h5 {
 .local_projeto {
    text-indent: 0pt !important;
 }
+
 
 
 
