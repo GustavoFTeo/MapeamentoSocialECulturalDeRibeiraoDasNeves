@@ -72,6 +72,7 @@ p {
 
 .botaonav {
     background-color: #3a1775;
+    color: white;
     border: 0;
     border-radius: 10px;
     height: 45px;
@@ -116,7 +117,7 @@ a{
 }
 
 .menuoculto{
-    background-color: #3a1775;
+    background-color: #1f005c;
     color: white
 }
 footer {
@@ -161,7 +162,7 @@ h4, h5 {
 }
 
 .projeto-card {
-    background-color: #2b0772;
+    background-color: #4b0082;
     border: none;
     color: white;
 }
