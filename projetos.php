@@ -1,21 +1,15 @@
 <?php
 session_start();
 ?>
-
 <html>
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
-      integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="estilizacaoPI2.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
-    <title>Projeta Neves</title>
-  </head>
-
-  <body>
-  
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="estilizacaoPI2.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+        <title>Projeta Neves</title>
+      </head>
+    <body>
+<!--NAVBAR-->
       <nav class="navbar border-bottom border-body" data-bs-theme="dark">
         <div style="height: 60px;" class="container-fluid justify-content-around">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
@@ -33,8 +27,8 @@ session_start();
           </div>
       </nav>
 
-
-      <div class="menuoculto offcanvas offcanvas-start align-items-center" tabindex="-1" id="menuLateral">
+<!--MENU LATERAL-->
+      <div class="offcanvas offcanvas-start menuoculto align-items-center" tabindex="-1" id="menuLateral">
           <div class="align-items-end">
             <img src="navbar/logo.png" alt="logo" width="60">
           </div>
@@ -53,12 +47,12 @@ session_start();
               </h5>
           </div>  
 
-     
-          <div class="offcanvas-body menuoculto" height="50">
-            <button type="button" class="botaonav btn me-2" data-bs-toggle="modal" data-bs-target="#popup_login">
+          <!--BOTÕES DE CONTA-->
+          <div class="offcanvas-body menuoculto">
+            <button type="button" class="btn botaonav me-2 " data-bs-toggle="modal" data-bs-target="#popup_login">
               Logar
             </button>
-            <button type="button" class="botaonav btn me-2" data-bs-toggle="modal" data-bs-target="#popup_cadastro">
+            <button type="button" class="btn botaonav ms-2" data-bs-toggle="modal" data-bs-target="#popup_cadastro">
               Cadastrar
             </button>
           </div>
@@ -72,7 +66,7 @@ session_start();
           </div>
       </div>
 
-
+<!--POPUP CADASTRO-->
       <div class="modal fade" id="popup_cadastro" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -104,7 +98,7 @@ session_start();
           </div>
         </div>
       </div>
-
+<!--POPUP LOGIN-->
       <div class="modal fade" id="popup_login" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -132,29 +126,13 @@ session_start();
         </div>
       </div>
 
-
-    <div class="my-5"></div>
-    
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h1 style="color: white; margin:0;">Projetos Culturais, Artísticos e de Lazer</h1>
-    </div>
-
+<!--TEXTOS DA PAGINA-->
     <div class="container my-5">
-        <label class="form-label fw-bold" style="color: rgb(255, 255, 255);">Filtrar por tipo de projeto:</label>
-        <select id="filtro-projetos" class="form-select">
-            <option value="">Selecione...</option>
-            <option value="culturais">Projetos Culturais</option>
-            <option value="esportes">Esportes</option>
-            <option value="educacao">Educação</option>
-        </select>
-    </div>
+      <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
+        <h1 style="color: white; margin:0;">Projetos Culturais, Artísticos e de Lazer</h1>
+      </div>
 
-
-    <div class="my-5"></div>
-
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h2 class="mt-5" id="culturais">Projetos culturais</h2>
-      <div class="my-4"></div>
+      <h2 class="mt-5">Projetos culturais</h2>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
           <div class="card projeto-card">
@@ -166,11 +144,10 @@ session_start();
               <i class="fas fa-paper-plane"></i>
               <p class="local_projeto mt-2 p-Pro">Sevilha | Cultural</p>
               <a href="projetosemifusa.html" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+                style="background-color: rgb(38, 9, 65); border-color: rgb(38, 9, 65);">Ver mais</a>
             </div>
           </div>
         </div>
-      
 
         <div class="col-md-4 mb-4">
           <div class="card projeto-card">
@@ -183,7 +160,7 @@ session_start();
               <i class="fas fa-paper-plane"></i>
               <p class="local_projeto mt-2 p-Pro">São Pedro | Projeto Sociocultural</p>
               <a href="projetocasadamulhernevense.html" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+                style="background-color: rgb(38, 9, 65); border-color: rgb(38, 9, 65);">Ver mais</a>
             </div>
           </div>
         </div>
@@ -198,18 +175,13 @@ session_start();
               <i class="fas fa-paper-plane"></i>
               <p class="local_projeto mt-2 p-Pro">Justinópolis | Projeto Religioso</p>
               <a href="projetoirmandade.html" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+                style="background-color: rgb(38, 9, 65); border-color: rgb(38, 9, 65);">Ver mais</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="my-5"></div>
 
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h2 class="mt-5" id="esportes">Esportes</h2>
-      <div class="my-4"></div>
+      <h2 class="mt-5">Esportes</h2>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
           <div class="card projeto-card">
@@ -221,18 +193,12 @@ session_start();
               <i class="fas fa-paper-plane"></i>
               <p class="local_projeto mt-2 p-Pro">Savassi | Esportivo</p>
               <a href="ginasiopoliesportivohenfil.html" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+                style="background-color: rgb(38, 9, 65); border-color: rgb(38, 9, 65);">Ver mais</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="my-5"></div>
-    
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h2 class="mt-5" id="educacao">Educação</h2>
-      <div class="my-4"></div>
+      <h2 class="mt-5">Educação</h2>
       <div class="row text-center">
         <div class="col-md-4 mb-4">
           <div class="card projeto-card">
@@ -244,15 +210,14 @@ session_start();
               <i class="fas fa-paper-plane"></i>
               <p class="local_projeto mt-2 p-Pro">Justinópolis | Mercado de Trabalho </p>
               <a href="capacitaneves.html" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+                style="background-color: rgb(38, 9, 65); border-color: rgb(38, 9, 65);">Ver mais</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
 
-   <footer class="text-light py-4 mt-5">
+    <footer class="text-light py-4 mt-5">
       <div class="container">
         <div class="row align-items-start">
           <div class="col-md-1 d-flex justify-content-center mb-3 mb-md-0">
@@ -271,11 +236,11 @@ session_start();
           <div class="col-md-3 mb-3 mb-md-0">
             <h5>Páginas principais:</h5>
             <ul class="list-unstyled">
-              <li class="li-Foo"><a href="index.php" class="text-light text-decoration-none">Sobre nós / Inicial</a>
+              <li class="li-Foo"><a href="index.html" class="text-light text-decoration-none">Sobre nós / Inicial</a>
               </li>
-              <li class="li-Foo"><a href="pagina_mapeamento.php"
+              <li class="li-Foo"><a href="pagina_mapeamento.html"
                   class="text-light text-decoration-none">Mapeamento Sociocultural</a></li>
-              <li class="li-Foo"><a href="projetos.php" class="text-light text-decoration-none">Projetos / Conheça
+              <li class="li-Foo"><a href="projetos.html" class="text-light text-decoration-none">Projetos / Conheça
                   mais</a></li>
             </ul>
           </div>
@@ -295,23 +260,5 @@ session_start();
         </div>
       </div>
     </footer>
-
-    <script>
-    document.getElementById("filtro-projetos").addEventListener("change", function () {
-        const valor = this.value;
-
-        if (valor) {
-        const alvo = document.getElementById(valor);
-        if (alvo) {
-            alvo.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        }
-    });
-    </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
   </body>
 </html>
