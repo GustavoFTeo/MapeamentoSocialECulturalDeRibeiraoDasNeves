@@ -224,140 +224,85 @@ if (file_exists($arquivo_curtidas)) {
         </div>
       </div>
     
-<!-- CORPO DA PAGINA-->
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h1 style="color: white; margin:0;">Projetos Culturais, Artísticos e de Lazer</h1>
-    </div>
-
-    <div class="container my-5">
-        <label class="form-label fw-bold" style="color: rgb(255, 255, 255);">Filtrar por tipo de projeto:</label>
-        <select id="filtro-projetos" class="form-select">
-            <option value="">Selecione...</option>
-            <option value="culturais">Projetos Culturais</option>
-            <option value="esportes">Esportes</option>
-            <option value="educacao">Educação</option>
-        </select>
-    </div>
-
-
-    <div class="my-5"></div>
-
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h2 class="mt-5" id="culturais">Projetos culturais</h2>
-      <div class="my-4"></div>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="card projeto-card">
-            <img src="pagina_projetos/imagemprojeto.jpeg" class="card-img-top" alt="Casa Semifusa">
-            <div class="card-body">
-              <h5 class="card-title">Casa Semifusa</h5>
-              <?php $id = 1; ?>
-                <a href="curtir.php?projeto_id=<?=$id?>">
-                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
-                </a>
-              <i class="fas fa-bookmark"></i>
-              <i class="fas fa-paper-plane"></i>
-              <p class="local_projeto mt-2 p-Pro">Sevilha | Cultural</p>
-              <a href="projetosemifusa.php" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+<!--TEXTOS DA PAGINA-->
+      <div class="container">
+        <div class="container text-center my-4">
+            <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
+                <h1 style="color: white; margin:0;">Casa da Mulher Nevense</h1>
             </div>
-          </div>
-        </div>
-      
-
-        <div class="col-md-4 mb-4">
-          <div class="card projeto-card">
-            <img src="pagina_projetos/imagemcasadamulhernevense.png" class="card-img-top"
-              alt="Casa da Mulher Nevense">
-            <div class="card-body">
-              <h5 class="card-title">Casa da Mulher Nevense</h5>
-              <?php $id = 2; ?>
-                <a href="curtir.php?projeto_id=<?=$id?>">
-                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
-                </a>
-              <i class="fas fa-bookmark"></i>
-              <i class="fas fa-paper-plane"></i>
-              <p class="local_projeto mt-2 p-Pro">São Pedro | Projeto Sociocultural</p>
-              <a href="projetocasadamulhernevense.php" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+            <div class="d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <img src="projetos/casadamulher/img/imagemcasadamulher2.jpeg" class="card-img-top imgHenfil" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title p-Ref">Três unidade:</h5>
+                        <p class="card-text p-Ref">Endereço: Rua Santo Agostinho, 09, Bairro São Januário, Ribeirão das Neves, MG</p>
+                        <p class="card-text p-Ref">Endereço: Rua Pedrolina Amâncio, 301, Bairro Veneza, Ribeirão das Neves, MG</p>
+                        <p class="card-text p-Ref">Endereço: Rua José Pedro Pereira, 501, Bairro São Pedro, Ribeirão das Neves, MG</p>
+                        <p class="card-text p-Ref"><small class="p-Ref2">Retirado de: Prefeitura de Ribeirão das Neves. Acesso em: 15 de set. 2025</small></p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="card projeto-card">
-            <img src="pagina_projetos/imagemirmandade.png" class="card-img-top" alt="Irmandade">
-            <div class="card-body">
-              <h5 class="card-title">Irmandade Nossa Senhora do Rosário</h5>
-              <?php $id = 3; ?>
-                <a href="curtir.php?projeto_id=<?=$id?>">
-                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
-                </a>
-              <i class="fas fa-bookmark"></i>
-              <i class="fas fa-paper-plane"></i>
-              <p class="local_projeto mt-2 p-Pro">Justinópolis | Projeto Religioso</p>
-              <a href="projetoirmandade.php" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+            <p>
+                A Casa da Mulher Nevense foi inaugurada em 28 de março de 2022, às 15h, em comemoração ao Dia 
+                Internacional da Mulher. Já no dia seguinte, iniciou suas atividades sob a coordenação de 
+                Cristiane Neves, oferecendo acolhimento e atendimento às mulheres do município. Com o aumento 
+                da procura e a necessidade de ampliar o alcance dos serviços, em 27 de maio de 2022 foi 
+                inaugurada a Sala da Mulher na Regional Justinópolis, iniciando suas atividades no dia 30 do 
+                mesmo mês, sob a coordenação de Bárbara Leite. No ano seguinte, em 8 de março de 2023, uma 
+                nova Sala da Mulher foi aberta no bairro Veneza, coordenada por Izabel Gonçalves. Pouco 
+                depois, em 24 de maio de 2023, a unidade de Justinópolis foi ampliada e reinaugurada como 
+                Casa da Mulher em um espaço maior, contando também com o Anexo Granjas Primavera, ligado às 
+                atividades da Casa da Mulher Central.
+            </p>
+            <div class="d-flex justify-content-center">
+                <div class="card mb-3 w-75">
+                    <img src="projetos/casadamulher/img/imagemcasadamulher1.jpg" class="card-img-top imgHenfil" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title p-Ref">Ações em comemoração ao Junho Lilás</h5>
+                        <p class="card-text p-Ref">A tradicional aula de zumba da Casa da Mulher Nevense, unidade 
+                            Justinópolis, foi diferente, o encontro reuniu dezenas de mulheres na Praça de Justinópolis,
+                             local de grande circulação de pessoas na região, que com cartazes alertavam a população 
+                             sobre o Junho Lilás, mês de reflexões e conscientização da violência contra a pessoa idosa.</p>
+                             <p class="card-text p-Ref"><small class="p-Ref2">Retirado de: Prefeitura de Ribeirão das Neves. Acesso em: 15 set. 2025</small></p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="my-5"></div>
-
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h2 class="mt-5" id="esportes">Esportes</h2>
-      <div class="my-4"></div>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="card projeto-card">
-            <img src="pagina_projetos/imagemhenfil.png" class="card-img-top" alt="Henfil">
-            <div class="card-body">
-              <h5 class="card-title">Centro Esportivo Henfil</h5>
-              <?php $id = 4; ?>
-                <a href="curtir.php?projeto_id=<?=$id?>">
-                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
-                </a>
-              <i class="fas fa-bookmark"></i>
-              <i class="fas fa-paper-plane"></i>
-              <p class="local_projeto mt-2 p-Pro">Savassi | Esportivo</p>
-              <a href="ginasiopoliesportivohenfil.php" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
-            </div>
-          </div>
+            <p>
+                Mais do que um espaço físico, a Casa da Mulher é um conceito de acolhimento, apoio e 
+                fortalecimento feminino. Trata-se de um equipamento voltado para o bem-estar, a segurança e o 
+                empoderamento das mulheres, oferecendo suporte em diversas áreas da vida pessoal, social e 
+                profissional. Na cidade de Ribeirão das Neves, a Casa da Mulher já se tornou referência, 
+                atuando tanto com vítimas de violência doméstica e mulheres em situação de vulnerabilidade, 
+                quanto com aquelas que buscam orientação, capacitação e crescimento pessoal.
+            </p>
+                <p>
+                    Atualmente, mais de 1.100 usuárias já foram atendidas e participam de atividades diversas 
+                    como cursos de profissionalização, aulas de reforço escolar, oficinas de artesanato, 
+                    palestras e atividades físicas. Além disso, a Casa da Mulher Nevense mantém parcerias 
+                    importantes com órgãos de segurança, como a PPVD (Patrulha de Prevenção à Violência Doméstica)
+                    , a Base Comunitária e o 40° BPMMG, fortalecendo a rede de proteção às mulheres. Em 
+                    articulação com as secretarias municipais, a Casa consegue realizar encaminhamentos e 
+                    atendimentos especializados. Hoje, Ribeirão das Neves tem o privilégio de contar com unidades 
+                    em Justinópolis, Veneza, na região central e no Anexo Granjas Primavera, ampliando o alcance 
+                    desse trabalho essencial de transformação social e valorização da mulher.
+                </p>
+                <div class="d-flex justify-content-center">
+                    <div class="card mb-3 w-75">
+                    <img src="projetos/casadamulher/img/imagemcasadamulher4.jpg" class="card-img-top imgHenfil" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title p-Ref">Roda de Conversa com Raquel Simplício</h5>
+                        <p class="card-text p-Ref">
+                            A Casa da Mulher nevense Centro e Justinópolis recebeu a psicóloga, escritora palestrante e idealizadora 
+                            do Projeto Mochila de Perguntas, Raquel Simplício para uma roda de conversas sobre a importância da 
+                            prevenção do câncer de mama e como ressignificar a vida após o tratamento.
+                        </p>
+                        <p class="card-text p-Ref"><small class="p-Ref2">Retirado de: Prefeitura de Ribeirão das Neves. Acesso em: 15 set. 2025.</small></p>
+                    </div>
+                    </div>
+                </div>
         </div>
       </div>
-    </div>
-
-    <div class="my-5"></div>
-    
-    <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-      <h2 class="mt-5" id="educacao">Educação</h2>
-      <div class="my-4"></div>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="card projeto-card">
-            <img src="pagina_projetos/imagemcapacitaneves.PNG" class="card-img-top" alt="Capacita Neves">
-            <div class="card-body">
-              <h5 class="card-title">Capacita Neves</h5>
-              <?php $id = 5; ?>
-                <a href="curtir.php?projeto_id=<?=$id?>">
-                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
-                </a>
-              <i class="fas fa-bookmark"></i>
-              <i class="fas fa-paper-plane"></i>
-              <p class="local_projeto mt-2 p-Pro">Justinópolis | Mercado de Trabalho </p>
-              <a href="capacitaneves.php" class="btn btn-primary mt-2"
-                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-   <footer class="text-light py-4 mt-5">
+    <footer class="text-light py-4 mt-5">
       <div class="container">
         <div class="row align-items-start">
           <div class="col-md-1 d-flex justify-content-center mb-3 mb-md-0">
@@ -400,18 +345,5 @@ if (file_exists($arquivo_curtidas)) {
         </div>
       </div>
     </footer>
-
-    <script>
-    document.getElementById("filtro-projetos").addEventListener("change", function () {
-        const valor = this.value;
-
-        if (valor) {
-        const alvo = document.getElementById(valor);
-        if (alvo) {
-            alvo.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        }
-    });
-    </script>
   </body>
 </html>

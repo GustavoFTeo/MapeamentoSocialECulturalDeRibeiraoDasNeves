@@ -1,17 +1,78 @@
 <?php
 session_start();
+
+// 1. Verifica login
+if (!isset($_SESSION['usuario'])) {
+    die("Você precisa estar logado!");
+}
+
+$usuario_id = $_SESSION['usuario']['id'];
+
+// Arquivos
+$arquivo_projetos = "documentos/projetos.txt";
+$arquivo_curtidas = "documentos/curtidas.txt";
+
+// ===============================
+// 2. Lê lista de projetos
+// ===============================
+$projetos = [];
+
+if (file_exists($arquivo_projetos)) {
+    $linhas = file($arquivo_projetos, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    foreach ($linhas as $linha) {
+        $partes = explode('|', $linha);
+        $dados = [];
+
+        foreach ($partes as $p) {
+            if (strpos($p, ':') !== false) {
+                list($chave, $valor) = explode(':', $p, 2);
+                $dados[$chave] = $valor;
+            }
+        }
+
+        if (isset($dados['id'])) {
+            $projetos[$dados['id']] = $dados;
+        }
+    }
+}
+
+// ===============================
+// 3. Lê CURTIDAS do usuário
+// ===============================
+$curtidas = [];
+
+if (file_exists($arquivo_curtidas)) {
+    $linhas = file($arquivo_curtidas, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    foreach ($linhas as $linha) {
+
+        list($u_raw, $p_raw) = explode("|", $linha);
+
+        $u_id = str_replace("usuario_id:", "", $u_raw);
+        $p_id = str_replace("projeto_id:", "", $p_raw);
+
+        if ($u_id == $usuario_id) {
+            $curtidas[] = $p_id;
+        }
+    }
+}
 ?>
+
+
 
 <html>
   <head>
-    <title>Projeta Neves</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="estilizacaoPI2.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilizacaoPI2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
     <title>Projeta Neves</title>
   </head>
+
   <body>
-    <nav class="navbar border-bottom border-body" data-bs-theme="dark">
+  
+      <nav class="navbar border-bottom border-body" data-bs-theme="dark">
         <div style="height: 60px;" class="container-fluid justify-content-around">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
                   <span class="navbar-toggler-icon"></span>
@@ -22,12 +83,13 @@ session_start();
                   <button  class="btn me-2" type="submit"><img width="30" src="navbar/lupa.png" alt=""></button>
                   <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
               </form>
-              <button class="botaonav btn me-2" type="button"><a href="index.html">Sobre nós</a></button>
-              <button class="botaonav btn me-2" type="button"><a href="pagina_mapeamento.html">Mapeamento</a></button>
-              <button class="botaonav btn me-2" type="button"><a href="projetos.html">Projetos</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="index.php">Sobre nós</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="pagina_mapeamento.php">Mapeamento</a></button>
+              <button class="botaonav btn me-2" type="button"><a href="projetos.php">Projetos</a></button>
           </div>
       </nav>
 
+<!--MENU LATERAL-->
       <div class="menuoculto offcanvas offcanvas-start align-items-center" tabindex="-1" id="menuLateral">
           <div class="align-items-end">
             <img src="navbar/logo.png" alt="logo" width="60">
@@ -47,6 +109,7 @@ session_start();
               </h5>
           </div>  
 
+
           <div class="offcanvas-body menuoculto" height="50">
             <button type="button" class="botaonav btn me-2" data-bs-toggle="modal" data-bs-target="#popup_login">
               Logar
@@ -58,13 +121,14 @@ session_start();
           <div class="offcanvas-body menuoculto w-75">
             <ul class="list-group menuoculto">
               <li class="list-group-item menuoculto"><a href="#">Dados do Usúario</a></li>
-              <li class="list-group-item menuoculto"><a href="#">Curtidas</a></li>
+              <li class="list-group-item menuoculto"><a type="button" data-bs-toggle="modal" data-bs-target="#popup_curtidas" href="#">Curtidas</a></li>
               <li class="list-group-item menuoculto"><a href="#">Descurtidas</a></li>
               <li class="list-group-item menuoculto"><a href="#">Salvos</a></li>
             </ul>
           </div>
       </div>
 
+<!--POPUP CADASTRO-->
       <div class="modal fade" id="popup_cadastro" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -96,7 +160,7 @@ session_start();
           </div>
         </div>
       </div>
-
+<!--POPUP LOGIN-->
       <div class="modal fade" id="popup_login" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -124,35 +188,47 @@ session_start();
         </div>
       </div>
 
+<!--POPUP CURTIDAS-->
+      <div class="modal fade" id="popup_curtidas" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="myModalLabel">Curtidas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5 style="color: #212529;text-align: center;">Projetos que você curtiu</h2>
+              <?php if (empty($curtidas)): ?>
+                  <h6 style="color: #212529; text-align: center;">Você ainda não curtiu nenhum projeto.</h6>
+
+              <?php else: ?>
+              <table style="width: 100%; border-collapse: collapse;" border="1" cellpadding="8">
+                  <tr>
+                      <th>Projeto</th>
+                      <th>Categoria</th>
+                      <th>Acessar</th>
+                  </tr>
+
+                  <?php foreach ($curtidas as $idProjeto): ?>
+                      <?php $p = $projetos[$idProjeto]; ?>
+                      <tr>
+                          <td><?= $p['projeto'] ?></td>
+                          <td><?= $p['categoria'] ?></td>
+                          <td><a style="color: #212529;"  href="<?= $p['link'] ?>">Abrir</a></td>
+                      </tr>
+                  <?php endforeach; ?>
+              </table>
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+<!--TEXTOS DA PAGINA-->
       <div class="container">
         <div class="container text-center my-4">
           <h1>Casa SemiFusa</h1>
-          <img src="imagemprojeto.jpeg" alt="Imagem do projeto" class="img-fluid my-3">
-
-          <div class="interacao">  
-            <div class="row text-center">
-              <div class="col">
-                <img src="icone/gostariadeir.png" alt="Gostaria de ir">
-                <p class="text-center align-middle">Gostaria de ir</p>
-              </div>
-              <div class="col">
-                <img src="icone/curtir.png" alt="Curtir">
-                <p class="text-center align-middle">Curtir</p>
-              </div>
-              <div class="col">
-                <img src="icone/descurtir.png" alt="Descurtir">
-                <p class="text-center align-middle">Descurtir</p>
-              </div>
-              <div class="col">
-                <img src="icone/salvar.png" alt="Salvar">
-                <p class="text-center align-middle">Salvar</p>
-              </div>
-              <div class="col">
-                <img src="icone/compartilhar.png" alt="Compartilhar">
-                <p class="text-center align-middle">Compartilhar</p>
-              </div>
-            </div>
-          </div>
+          <img src="projetos\casasemifusa\casasemifusa.jpg" alt="Imagem do projeto" class="img-fluid my-3">
 
             <p class="lh-base p-cent"> A Casa Semifusa é um centro cultural comunitário localizado em Ribeirão das Neves, fundado pelo
         Instituto Cultural Semifusa. Ela atua como um ponto de encontro e formação artística para a juventude
@@ -175,7 +251,7 @@ session_start();
             </p>
         </div>
       </div>
-  <footer class="text-light py-4 mt-5">
+    <footer class="text-light py-4 mt-5">
       <div class="container">
         <div class="row align-items-start">
           <div class="col-md-1 d-flex justify-content-center mb-3 mb-md-0">

@@ -1,16 +1,77 @@
 <?php
 session_start();
+
+// 1. Verifica login
+if (!isset($_SESSION['usuario'])) {
+    die("Você precisa estar logado!");
+}
+
+$usuario_id = $_SESSION['usuario']['id'];
+
+// Arquivos
+$arquivo_projetos = "documentos/projetos.txt";
+$arquivo_curtidas = "documentos/curtidas.txt";
+
+// ===============================
+// 2. Lê lista de projetos
+// ===============================
+$projetos = [];
+
+if (file_exists($arquivo_projetos)) {
+    $linhas = file($arquivo_projetos, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    foreach ($linhas as $linha) {
+        $partes = explode('|', $linha);
+        $dados = [];
+
+        foreach ($partes as $p) {
+            if (strpos($p, ':') !== false) {
+                list($chave, $valor) = explode(':', $p, 2);
+                $dados[$chave] = $valor;
+            }
+        }
+
+        if (isset($dados['id'])) {
+            $projetos[$dados['id']] = $dados;
+        }
+    }
+}
+
+// ===============================
+// 3. Lê CURTIDAS do usuário
+// ===============================
+$curtidas = [];
+
+if (file_exists($arquivo_curtidas)) {
+    $linhas = file($arquivo_curtidas, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    foreach ($linhas as $linha) {
+
+        list($u_raw, $p_raw) = explode("|", $linha);
+
+        $u_id = str_replace("usuario_id:", "", $u_raw);
+        $p_id = str_replace("projeto_id:", "", $p_raw);
+
+        if ($u_id == $usuario_id) {
+            $curtidas[] = $p_id;
+        }
+    }
+}
 ?>
 
+
+
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="estilizacaoPI2.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
-        <title>Projeta Neves</title>
-      </head>
-    <body>
-      
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilizacaoPI2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+    <title>Projeta Neves</title>
+  </head>
+
+  <body>
+  
       <nav class="navbar border-bottom border-body" data-bs-theme="dark">
         <div style="height: 60px;" class="container-fluid justify-content-around">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
@@ -28,7 +89,7 @@ session_start();
           </div>
       </nav>
 
-
+<!--MENU LATERAL-->
       <div class="menuoculto offcanvas offcanvas-start align-items-center" tabindex="-1" id="menuLateral">
           <div class="align-items-end">
             <img src="navbar/logo.png" alt="logo" width="60">
@@ -60,14 +121,14 @@ session_start();
           <div class="offcanvas-body menuoculto w-75">
             <ul class="list-group menuoculto">
               <li class="list-group-item menuoculto"><a href="#">Dados do Usúario</a></li>
-              <li class="list-group-item menuoculto"><a href="#">Curtidas</a></li>
+              <li class="list-group-item menuoculto"><a type="button" data-bs-toggle="modal" data-bs-target="#popup_curtidas" href="#">Curtidas</a></li>
               <li class="list-group-item menuoculto"><a href="#">Descurtidas</a></li>
               <li class="list-group-item menuoculto"><a href="#">Salvos</a></li>
             </ul>
           </div>
       </div>
 
-
+<!--POPUP CADASTRO-->
       <div class="modal fade" id="popup_cadastro" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -99,7 +160,7 @@ session_start();
           </div>
         </div>
       </div>
-
+<!--POPUP LOGIN-->
       <div class="modal fade" id="popup_login" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -127,15 +188,49 @@ session_start();
         </div>
       </div>
 
-      <div class="my-5"></div>
-      <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-        <h2 style="color: white; margin:0;">Ribeirão das Neves além do óbvio: conheça o que realmente faz nossa cidade especial!</h2>
-      </div>
+<!--POPUP CURTIDAS-->
+      <div class="modal fade" id="popup_curtidas" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="myModalLabel">Curtidas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5 style="color: #212529;text-align: center;">Projetos que você curtiu</h2>
+              <?php if (empty($curtidas)): ?>
+                  <h6 style="color: #212529; text-align: center;">Você ainda não curtiu nenhum projeto.</h6>
 
+              <?php else: ?>
+              <table style="width: 100%; border-collapse: collapse;" border="1" cellpadding="8">
+                  <tr>
+                      <th>Projeto</th>
+                      <th>Categoria</th>
+                      <th>Acessar</th>
+                  </tr>
+
+                  <?php foreach ($curtidas as $idProjeto): ?>
+                      <?php $p = $projetos[$idProjeto]; ?>
+                      <tr>
+                          <td><?= $p['projeto'] ?></td>
+                          <td><?= $p['categoria'] ?></td>
+                          <td><a style="color: #212529;"  href="<?= $p['link'] ?>">Abrir</a></td>
+                      </tr>
+                  <?php endforeach; ?>
+              </table>
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+<!--TEXTOS DA PAGINA-->
       <div class="container">
         <div class="container text-center my-4">
-          
-          <img src="pagina_sobre_nos /img/introducaoRN.jpeg" width="70%" class="mx-auto d-block py-4">
+          <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
+              <h2 style="color: white; margin:0;">Ribeirão das Neves além do óbvio: conheça o que realmente faz nossa cidade especial!</h2>
+          </div>
+          <img src="pagina_sobre_nos/img/introducaoRN.jpeg" width="70%" class="mx-auto d-block py-4">
           <p class="lh-base p-cent">Este espaço foi criado com o intuito de ser uma Cartografia Participativa de Ribeirão das Neves, uma cidade da Região Metropolitana de Belo Horizonte (capital do estado de Minas Gerais, Brasil), tendo como principais pesquisadores e desenvolvedores, estudantes do ensino médio integrado à formação técnica do Instituto Federal de Educação Tecnológica de Minas Gerais-IFMG, campus de Ribeirão das Neves, curso de informática, auxiliados por professores orientadores do mesmo instituto (Saiba mais).</p>
           <p class="lh-base p-cent">Nosso objetivo é apresentar o município à população de forma positiva, focando em espaços culturais, artísticos e educativos da cidade, espaços esses que contribuem para identidade de Ribeirão das Neves. Nesse sentido,  a partir do conceito de anúncio de Paulo Freire (1921 – 1997), o projeto desvela e anuncia uma cidade para além de seus estereótipos, mas descortina  uma cidade em pleno crescimento e cotidianamente sendo construída por instituições diversas, empresas, comércios, mas principalmente pela força de seus moradores, sejam crianças, jovens, adultos ou idosos.</p>
           <p class="lh-base p-cent">Paulo Freire - Educador, filósofo e escritor brasileiro, reconhecido mundialmente por suas contribuições à pedagogia crítica e à educação popular.</p>
@@ -175,7 +270,7 @@ session_start();
                 <div class="card h-100">
                   <img src="pagina_sobre_nos /img/perfil/Carla.png" class="card-img-top w-50 mx-auto d-block" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Carla Morais</h5>
+                    <h5 class="card-title">Carla Moraes</h5>
                     <p class="card-text">Estudante de informática do 2° ano do ensino médio técnico integrado no IFMG.</p>
                   </div>
                 </div>
@@ -289,6 +384,5 @@ session_start();
         </div>
       </div>
     </footer>
-    </body>
+  </body>
 </html>
-

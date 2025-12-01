@@ -3,7 +3,7 @@ session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $arquivo = 'usuarios.txt';
+    $arquivo = 'documentos\usuarios.txt';
     $linhas = file($arquivo, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
     $usuario = $_POST["usuario"] ?? null;
