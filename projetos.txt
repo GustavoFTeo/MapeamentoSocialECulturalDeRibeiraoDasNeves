@@ -1,0 +1,5 @@
+id:1|projeto:Casa Semifusa|link:projetosemifusa.php|categoria:Cultural|curtidas:0
+id:2|projeto:Casa da Mulher Nevense|link:projetocasadamulhernevense.php|categoria:Cultural|curtidas:0
+id:3|projeto:Irmandade Nossa Senhora do Rosário|link:projetoirmandade.php.php|categoria:Cultural|curtidas:0
+id:4|projeto:Centro Esportivo Henfil|link:ginasiopoliesportivohenfil.php|categoria:Esporte|curtidas:0
+id:5|projeto:Capacita Neves|link:capacitaneves.php|categoria:Educação|curtidas:0
