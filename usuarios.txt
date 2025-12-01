@@ -1,1 +1,0 @@
-id:1|usuario:Gustavo Ferreira Teodoro|contato:gustavofteo@gmail.com|senha:guga
