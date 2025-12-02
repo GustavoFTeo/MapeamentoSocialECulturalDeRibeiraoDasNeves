@@ -85,10 +85,7 @@ if (file_exists($arquivo_curtidas)) {
               </button>
               <img src="navbar/logo.png" alt="logo" width="60">
               <a id="marca-nome" class="navbar-brand" href="#">Projeta Neves</a>
-              <form class="d-flex align-items-center me-2" role="search">
-                  <button  class="btn me-2" type="submit"><img width="30" src="navbar/lupa.png" alt=""></button>
-                  <input class="pesquisa form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              </form>
+              
               <button class="botaonav btn me-2" type="button"><a href="index.php">Sobre nós</a></button>
               <button class="botaonav btn me-2" type="button"><a href="pagina_mapeamento.php">Mapeamento</a></button>
               <button class="botaonav btn me-2" type="button"><a href="projetos.php">Projetos</a></button>
@@ -315,3 +312,4 @@ if (file_exists($arquivo_curtidas)) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
+
