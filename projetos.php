@@ -298,6 +298,24 @@ if (file_exists($arquivo_curtidas)) {
             </div>
           </div>
         </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card projeto-card">
+            <img src="projetos/diquebrada/imagemdiquebrada.png" class="card-img-top" alt="Diquebrada">
+            <div class="card-body">
+              <h5 class="card-title">Centro Cultural DiQuebrada</h5>
+              <?php $id = 3; ?>
+                <a href="curtir.php?projeto_id=<?=$id?>">
+                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
+                </a>
+              <i class="fas fa-bookmark"></i>
+              <i class="fas fa-paper-plane"></i>
+              <p class="local_projeto mt-2 p-Pro">Justinópolis | Cultural</p>
+              <a href="projetoirmandade.php" class="btn btn-primary mt-2"
+                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
@@ -412,4 +430,3 @@ if (file_exists($arquivo_curtidas)) {
     </script>
   </body>
 </html>
-
