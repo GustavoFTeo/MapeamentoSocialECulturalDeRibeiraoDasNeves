@@ -1,10 +1,4 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="estilizacaoPI2.css">
-      </head>
-    <body>
-    <?php
+<?php
 session_start();
 
 // 1. Verifica login
@@ -85,7 +79,7 @@ if (file_exists($arquivo_curtidas)) {
               </button>
               <img src="navbar/logo.png" alt="logo" width="60">
               <a id="marca-nome" class="navbar-brand" href="#">Projeta Neves</a>
-              
+        
               <button class="botaonav btn me-2" type="button"><a href="index.php">Sobre nós</a></button>
               <button class="botaonav btn me-2" type="button"><a href="pagina_mapeamento.php">Mapeamento</a></button>
               <button class="botaonav btn me-2" type="button"><a href="projetos.php">Projetos</a></button>
@@ -312,4 +306,5 @@ if (file_exists($arquivo_curtidas)) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
+
 
