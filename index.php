@@ -222,27 +222,52 @@ if (file_exists($arquivo_curtidas)) {
       </div>
     
 <!--TEXTOS DA PAGINA-->
+      <div class="my-5"></div>
+      <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
+        <h2 style="color: white; margin:0;">Ribeirão das Neves além do óbvio: conheça o que realmente faz nossa cidade especial!</h2>
+      </div>
       <div class="container">
         <div class="container text-center my-4">
-          <div style="background-color: rgb(65, 31, 128); text-align:center; padding:15px;">
-              <h2 style="color: white; margin:0;">Ribeirão das Neves além do óbvio: conheça o que realmente faz nossa cidade especial!</h2>
-          </div>
           <img src="pagina_sobre_nos/img/introducaoRN.jpeg" width="70%" class="mx-auto d-block py-4">
-          <p class="lh-base p-cent">Este espaço foi criado com o intuito de ser uma Cartografia Participativa de Ribeirão das Neves, uma cidade da Região Metropolitana de Belo Horizonte (capital do estado de Minas Gerais, Brasil), tendo como principais pesquisadores e desenvolvedores, estudantes do ensino médio integrado à formação técnica do Instituto Federal de Educação Tecnológica de Minas Gerais-IFMG, campus de Ribeirão das Neves, curso de informática, auxiliados por professores orientadores do mesmo instituto (Saiba mais).</p>
-          <p class="lh-base p-cent">Nosso objetivo é apresentar o município à população de forma positiva, focando em espaços culturais, artísticos e educativos da cidade, espaços esses que contribuem para identidade de Ribeirão das Neves. Nesse sentido,  a partir do conceito de anúncio de Paulo Freire (1921 – 1997), o projeto desvela e anuncia uma cidade para além de seus estereótipos, mas descortina  uma cidade em pleno crescimento e cotidianamente sendo construída por instituições diversas, empresas, comércios, mas principalmente pela força de seus moradores, sejam crianças, jovens, adultos ou idosos.</p>
-          <p class="lh-base p-cent">Paulo Freire - Educador, filósofo e escritor brasileiro, reconhecido mundialmente por suas contribuições à pedagogia crítica e à educação popular.</p>
-          <p class="lh-base p-cent">Anúncio: Aqueles comprometidos com a transformação do mundo são proféticos, pensando na sua condição de ser mais, já que denunciam, mas também anunciam o meio em que vivem. Assim sendo, além de denunciar é necessário anunciar uma nova realidade a partir do seu contexto social e histórico. (FREIRE, 1980)</p>
-          <p class="lh-base p-cent">No Projeta Neves você descobrirá: A história de Ribeirão das Neves, desde a sua origem até à sua atualidade; diversos projetos relacionados à Arte, Cultura e Lazer presentes na cidade de Ribeirão das Neves, juntamente com informações detalhadas sobre os mesmos, como locais de atuação e propósitos; além disso, aqui você encontrará e poderá participar do Mapeamento, já desenvolvido, dos variados movimentos sociais e culturais vigentes no município que reforçam a nova identidade de Ribeirão das Neves que se distancia fortemente de estereótipos negativos atribuídos a cidade.</p>
-          
-          <h2>A História de Ribeirão das Neves</h2>
-          <p class="lh-base p-cent">A história de Ribeirão das Neves inicia-se no século XVIII, quando a região era conhecida como “Matas de Bento Pires”. Em 1745, o mestre-de-campo Jacintho Vieira da Costa recebeu uma sesmaria, erguendo em 1747 a Capela de Nossa Senhora das Neves — e assim surgiu a “Fazenda das Neves”, nome que daria origem à cidade. Com a morte de Jacintho em 1760, os conflitos sucessórios marcaram o desenvolvimento até que, em fins daquele século, o Capitão José Luís de Andrade adquiriu a fazenda, estabelecendo-se com sua família e consolidando a estrutura local.</p>
-          <p class="lh-base p-cent">A partir de 1827, a localidade foi elevada à condição de distrito de paz, com cerca de 1.241 habitantes, mas sofreu transformações administrativas nas décadas seguintes, passando por anexações a diversos municípios como Contagem, Betim e Pedro Leopoldo. A transformação mais significativa ocorreu com a implantação da Penitenciária Agrícola de Neves, inaugurada em 1938, que impulsionou o crescimento populacional e urbano da região. Finalmente, em 12 de dezembro de 1953, Ribeirão das Neves se emancipou, tornando-se município composto pelos distritos sede (Neves) e Justinópolis.</p>
-          <p class="lh-base p-cent">Ao longo dos anos, a cidade vivenciou um acelerado crescimento urbano, especialmente a partir dos anos 1970, muitas vezes de forma desordenada, resultando em ocupações periféricas que refletem os desafios vividos pela população, como infraestrutura precária, saneamento básico falho, habitação e serviços públicos insuficientes.</p>
-          <p class="lh-base p-cent">No entanto, Ribeirão das Neves vem gradualmente abandonando a pecha de “cidade-dormitório”. Isso se deve à diversificação econômica que inclui indústrias cerâmicas, de canos, tecidos, refrigerantes, farmacêuticas, além de centros de distribuição e atacados. A presença do setor primário – como agricultura de pequeno porte e extração de gnaisse – também marca a economia local. Projetos de urbanização, investimentos em infraestrutura (avenida Eduardo Brandão, iluminação LED, pavimentação de ruas, escolas e saúde), atração de empresas via incentivos fiscais (PRODEM) e geração de empregos reforçam essa transformação.</p>
-          <p class="lh-base p-cent">A vivência do povo nevense é marcada também pela fé e cultura. As celebrações em honra à padroeira, Nossa Senhora das Neves, especialmente a tradicional “Festa de Agosto”, reúnem comunidade com missas, barraquinhas, shows e fogos, fortalecendo o vínculo popular. Patrimônios como a Igreja Matriz e o Mercado Municipal são pontos de encontro e expressão cultural — o mercado, em especial, reflete a culinária e o cotidiano local, com produtos típicos como o pastel de angu. Espaços como o Parque Ecológico e o Parque da Lajinha evidenciam a riqueza natural e o potencial de lazer e convivência da cidade.</p>
-          <p class="lh-base p-cent">Há igualmente forte presença de história e resistência nas comunidades quilombolas, como a Irmandade de Nossa Senhora do Rosário, no distrito de Justinópolis — testemunho vivo da cultura afrodescendente, que enfrenta desafios como a perda de território e pressões urbanísticas, mas permanece unida preservando tradições, festividades e identidade.</p>
-          <p class="lh-base p-cent">Além disso, iniciativas sociais como a “Cidade dos Meninos São Vicente de Paulo” acolhem jovens em situação de vulnerabilidade, oferecendo educação, esporte, atividades culturais e formação, reforçando a importância da cidade como espaço de acolhimento e desenvolvimento humano.</p>
-          <p class="lh-base p-cent">Em síntese, Ribeirão das Neves é uma cidade que nasceu entre terras rurais e devoção, evoluiu em meio a desafios estruturais e administrativos, e hoje emerge como um polo em constante transformação. Sua história é vivida nas ruas e nas festas, nas lutas por direitos e territórios, nas fábricas e nos parques — e principalmente na cotidianidade de seus moradores, que constroem seu futuro com orgulho, fé e resiliência.</p>
+          <p class="lh-base p-cent">Nosso principal objetivo é mostrar os pontos positivos de Ribeirão das
+            Neves, quebrando o estigma gerado pela mídia em relação a cidade. Nesse contexto, dados da
+            ribeiraodasneves.net+1, diz que segundo relatório da Secretaria de Estado de Justiça e
+            Segurança Pública de Minas Gerais (Sejusp), Ribeirão das Neves registrou uma queda de
+            29 % nos crimes violentos entre 2022 e 2025, no mesmo período (2025), os homicídios em
+            Neves caíram 25,49%. Em termos de taxa de crimes violentos por 100 mil habitantes
+            (2023), Neves aparece com cerca de 224,1 crimes violentos a cada 100 mil, número
+            menor do que o de alguns municípios da RMBH, o que aponta que não está isoladamente
+            no topo negativo, afirma Segurança MG+1.</p>
+          <p class="lh-base p-cent">Além disso, em um levantamento de 2023, os municípios da RMBH com 
+            maiores taxas de crimes violentos incluíam Contagem e Betim acima de Neves, dados também da Segurança
+            MG+1. Ademais, no mesmo relatório há informações que mostram que em termos
+            de taxa de crimes violentos por 100 mil habitantes, Contagem aparece com taxa de
+            390,0/100 mil hab, também no ranking, Betim fica com taxa de 246,4/100 mil hab.
+            Esses dados indicam que, considerando a taxa de crimes violentos por 100 mil
+            habitantes, que é uma medida relativamente justa para comparar municípios com
+            populações diferentes, Ribeirão das Neves tem taxa menor do que Contagem e
+            Betim (pelo menos segundo os dados de 2023).</p>
+          <p class="lh-base p-cent">Isso mostra que não é correto
+            afirmar que Neves seja “a mais perigosa” da região sem especificar o critério usado.
+            Outrossim, um dos maiores problemas que Ribeirão das Neves enfrenta é a pobreza,
+            de acordo com o “Mapa da Riqueza” do FGV Social, a renda média per capita de
+            Ribeirão das Neves era de apenas R$ 353,82 bem abaixo da média dos municípios
+            mais ricos de Minas Gerais, isso coloca Neves na 493ª posição no estado.Dados do
+            IBGE, do Infosanbas, do Instituto Água e Saneamento (IAS), da ARSAE-MG e de
+            estudos do Repositório da UFMG indicam que Ribeirão das Neves enfrenta altos
+            níveis de pobreza, infraestrutura limitada e pressão sobre os serviços públicos. O
+            município apresenta baixo desenvolvimento socioeconômico e desigualdade
+            significativa, fatores que explicam muitos dos seus desafios sociais.</p>
+          <p class="lh-base p-cent">Embora Contagem e Betim apresentem taxas de crimes violentos maiores 
+            que as de Ribeirão das Neves segundo os dados da Sejusp, essas cidades muitas vezes são
+            percebidas como 'melhores' ou 'mais seguras' devido à sua maior arrecadação,
+            maior presença industrial e melhor infraestrutura.</p>
+          <p class="lh-base p-cent">Ribeirão das Neves, por ser historicamente marcada pela pobreza, 
+            enfrenta estigmas que influenciam sua imagem pública, levando muitas pessoas a
+            classificá-la como mais perigosa mesmo quando os dados mostram o contrário.
+            Ribeirão das Neves não deve ser caracterizada pelos estigmas de “cidade de
+            presídios" ou ”Ribeirão das Trevas", mas sim reconhecida como um território com
+            potencial e oportunidades."</p>
         </div>
           <div class="row row-cols-1 row-cols-md-3 g-4" id="sobre">
               <div class="col">
