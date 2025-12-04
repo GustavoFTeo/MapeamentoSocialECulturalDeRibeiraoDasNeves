@@ -240,7 +240,7 @@ if (file_exists($arquivo_curtidas)) {
             <div class="d-flex justify-content-center">
                 <div class="card mb-3 w-75 mx-3 mt-4">
 
-                    <img src="projetos/IFMG/imagemifmg.png" class="card-img-top imgpadrao" alt="Imagem IFMG">
+                    <img src="projetos/ifmg/imagemifmg.png" class="card-img-top imgpadrao" alt="Imagem IFMG">
                     <div class="card-body">
                         <p class="card-text p-Ref">Endereço: Rua Taiobeiras, 169, Sevilha (2ª Seção), Ribeirão das Neves - MG, 33858-480.</p>
                         <p class="card-text p-Ref"><small class="p-Ref2">Retirado de: Google Maps</small></p>
@@ -330,4 +330,5 @@ if (file_exists($arquivo_curtidas)) {
 
     </body>
 </html>
+
 
