@@ -292,7 +292,7 @@ if (file_exists($arquivo_curtidas)) {
                 <div class="card h-100">
                   <img src="pagina_sobre_nos /img/perfil/Carla.png" class="card-img-top w-50 mx-auto d-block" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Carla Moraes</h5>
+                    <h5 class="card-title">Carla Morais</h5>
                     <p class="card-text">Estudante de informática do 2° ano do ensino médio técnico integrado no IFMG.</p>
                   </div>
                 </div>
@@ -409,3 +409,4 @@ if (file_exists($arquivo_curtidas)) {
   </body>
 
 </html>
+
