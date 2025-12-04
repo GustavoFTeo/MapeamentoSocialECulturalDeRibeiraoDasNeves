@@ -258,7 +258,7 @@ if (file_exists($arquivo_curtidas)) {
 
             <div class="d-flex justify-content-center">
                 <div class="card mb-3 w-75 mx-3">
-                    <img src="projetos/ifmg/imagempredionovo.jpeg" class="card-img-top imgpadrao" alt="Prédio novo IFMG">
+                    <img src="projetos/ifmg/imagempredionovo.png" class="card-img-top imgpadrao" alt="Prédio novo IFMG">
                     <div class="card-body">
                         <p class="card-text p-Ref"><small class="p-Ref2">Retirado de: Google Maps</small></p>
                     </div>
@@ -330,5 +330,6 @@ if (file_exists($arquivo_curtidas)) {
 
     </body>
 </html>
+
 
 
