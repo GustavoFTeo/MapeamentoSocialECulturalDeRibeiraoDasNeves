@@ -281,6 +281,7 @@ if (file_exists($arquivo_curtidas)) {
           </div>
         </div>
 
+
         <div class="col-md-4 mb-4">
           <div class="card projeto-card">
             <img src="pagina_projetos/imagemirmandade.png" class="card-img-top" alt="Irmandade">
@@ -298,24 +299,41 @@ if (file_exists($arquivo_curtidas)) {
             </div>
           </div>
         </div>
+        <div class="col-md-4 mb-4">
+          <div class="card projeto-card">
+            <img src="projetos/DIQUEBRADA/imagemdiquebrada.png" class="card-img-top" alt="Irmandade">
+            <div class="card-body">
+              <h5 class="card-title">Cine Teatro RN</h5>
+              <?php $id = 3; ?>
+                <a href="curtir.php?projeto_id=<?=$id?>">
+                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
+                </a>
+                <i class="fas fa-bookmark"></i>
+                <i class="fas fa-paper-plane"></i>
+                <p class="local_projeto mt-2 p-Pro">Justinópolis | Projeto Sociocultural</p>
+                <a href="projetoirmandade.php" class="btn btn-primary mt-2" style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+            </div>
+          </div>
+        </div>
 
         <div class="col-md-4 mb-4">
           <div class="card projeto-card">
-            <img src="projetos/diquebrada/imagemdiquebrada.png" class="card-img-top" alt="Diquebrada">
+            <img src="projetos/cineteatro/EntradaCineTeatro.png" class="card-img-top" alt="Irmandade">
             <div class="card-body">
-              <h5 class="card-title">Centro Cultural DiQuebrada</h5>
+              <h5 class="card-title"> Centro Cultural Di  Quebrada</h5>
               <?php $id = 3; ?>
                 <a href="curtir.php?projeto_id=<?=$id?>">
                   <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
                 </a>
               <i class="fas fa-bookmark"></i>
               <i class="fas fa-paper-plane"></i>
-              <p class="local_projeto mt-2 p-Pro">Justinópolis | Cultural</p>
+              <p class="local_projeto mt-2 p-Pro">Justinópolis | Projeto Sociocultural</p>
               <a href="projetoirmandade.php" class="btn btn-primary mt-2"
                 style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
             </div>
           </div>
         </div>
+
       </div>
     </div>
     
@@ -368,7 +386,25 @@ if (file_exists($arquivo_curtidas)) {
             </div>
           </div>
         </div>
-      </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card projeto-card">
+            <img src="projetos/ifmg/imagemifmg.png" class="card-img-top" alt="Irmandade">
+            <div class="card-body">
+              <h5 class="card-title">IFMG</h5>
+              <?php $id = 3; ?>
+                <a href="curtir.php?projeto_id=<?=$id?>">
+                  <i class="fas fa-heart <?= in_array($id, $curtidas) ? 'text-danger' : '' ?>"></i>
+                </a>
+              <i class="fas fa-bookmark"></i>
+              <i class="fas fa-paper-plane"></i>
+              <p class="local_projeto mt-2 p-Pro">Sevilha B | Projeto Educacional</p>
+              <a href="projetoirmandade.php" class="btn btn-primary mt-2"
+                style="background-color: rgb(65, 31, 128); border-color: rgb(38, 9, 65);">Ver mais</a>
+            </div>
+          </div>
+        </div>
+
     </div>
     </div>
 
